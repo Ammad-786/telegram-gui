@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Telegram App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" >
+    <style>
+    /* Add some styling to the page */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid-first {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 8px;
+        border: 1px solid rgb(255, 0, 0);
+        align-items: center;
+        margin: 20px 0px 0px 40px;
+        background-color: #fff;
+    }
+    .grid-second {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2px;
+        border: 1px solid rgb(255, 0, 0);
+        align-items: center;
+        margin: 20px 0px 40px 40px;
+        background-color: #fff;
+    }
+    form {
+        margin-bottom: 0px;
+    }
+    .checkbox {
+        display: grid;
+        margin: 10px;
+    }
+    .typebox{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .typebox-second {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .elements{
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .firstbox{
+        width: 300px;
+        height: 300px;
+        margin: 20px 0px 40px 40px;
+    }
+    .secondbox{
+        width: 300px;
+        height: 300px;
+        margin: 60px;
+    }
+    button {
+        width: 300px;
+        height: 50px;
+        border: 1px solid black;
+    }
+    button:hover{
+        background-color: black;
+        color:azure;
+    }
+    #log-console {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #000;
+            color: #fff;
+            overflow: scroll;
+        }
+    </style>
+</head>
+  <body>
+    <div class="navbar">
+        
+        <a href="./To Set The Function.html">To Set The Function</a>
+        <a href="./Pull Function.html">Pull Function</a>
+        <a href="./Channel Function.html">Channel Function</a>
+        <a href="./Mass Distribution Function.html">Mass Distribution Function</a>
+        <a href="./Private Post Function.html">Private Post Function</a>
+        <a href="./Automatic Chat With Forwarding Function.html">Automatic Chat With Forwarding Function</a>
+        <a href="./Monitor Function.html">Moniter Function</a>
+        <a href="./Api Funtion.html">Account/API Function</a>
+      </div>
+
+        <div class="container">
+            <form>
+                <div class="grid-first">
+                    <div class="firstbox">
+                        <h4 style="margin: 2px;">Collect Member ID</h4>
+                        <input style="height: 240px; width: 280px;"  type="text" placeholder="">
+                        <p style="color: red; font-weight: bold;">Note: One group link per line (no More than 20 group at a time).</p>
+                    </div>
+                    <div class="checkbox" >
+                        <div class="elements">
+                            <p>Filter Group Owner Administrator</p>
+                            <p>:</p>
+                            <input style="height: 20px; width: 20px; margin:18px 0px;" type="checkbox">
+                        </div>
+                        <div class="elements">
+                            <p>Only Collect The Main Group Manager</p>
+                            <p>:</p>
+                            <input style="height: 20px; width: 20px; margin:18px 0px;" type="checkbox" label="To Set The Function">
+                        </div>
+                        <div class="elements">
+                            <p>Save The Same Folder</p>
+                            <p>:</p>
+                            <input style="height: 20px; width: 20px; margin:18px 0px;" type="checkbox" label="To Set The Function">
+                        </div>
+                        <div class="elements">
+                            <p>Learn 3 Compulsory Acquisition Mode</p>
+                            <p>:</p>
+                            <input style="height: 20px; width: 20px; margin:18px 0px;" type="checkbox" label="To Set The Function">
+                        </div>
+                        <div class="elements">
+                            <p>Onlu Collect Mobile Phone Number</p>
+                            <p>:</p>
+                            <input style="height: 20px; width: 20px; margin:18px 0px;" type="checkbox" label="To Set The Function">
+                        </div>
+                    </div>
+                    <div class="typebox">
+                        <p>Online Range (Days)</p>
+                        <input style="height: 30px; width: 50px; margin:25px 0px" type="number"  placeholder="">
+                        <p style="margin:25px 0px">~</p>
+                        <input style="height: 30px; width: 50px; margin:25px 0px" type="number" placeholder="">
+                    </div>
+                    <div class="button">
+                        <button type="submit">Start Collecting Group Members</button>
+                    </div>
+                </div>
+            </form>
+
+            <form>
+                <div class="grid-second">
+                    <div class="secondbox">
+                        <h4 style="margin: 2px;">Collect Group Link</h4>
+                        <input style="height: 240px; width: 240px; margin-bottom: 10px;"  type="text" placeholder="">
+                        <div>
+                            <button type="submit" style="height: 40px; width: 120px;">Start Collecting Chinese Groups</button>
+                            <button type="submit" style="height: 40px; width: 120px;">Start Collecting English Groups</button>
+                        </div>
+                    </div>
+                    <div>
+                        <input style="height: 200px; width: 400px; margin-bottom: 10px;"  type="text" placeholder="">
+                        <p style="color: red; font-weight: bold;">Note: (One Line Per Line) Format: Longitude/Latitude</p>
+                        <div class="typebox-second">
+                            <p>Online Range (Days)</p>
+                            <input style="height: 30px; width: 50px; margin:25px 0px" type="number"  placeholder="">
+                            <p style="margin:25px 0px">~</p>
+                            <input style="height: 30px; width: 50px; margin:25px 0px" type="number"  placeholder="">
+                        </div>
+                        <div class="button">
+                            <button type="submit" style="height: 40px; width: 400px;">Start Collecting Groups</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="log-console">
+            <!-- messages will be output here -->
+        </div>
+        <script>
+            console.log('Initializing log console...');
+            // Output messages to the log console
+            function log(message) {
+                var logConsole = document.getElementById('log-console');
+                logConsole.innerHTML += '<br>' + message;
+            }
+
+            log('Log console initialized.');
+        </script>
+</body>
+</html>
+
+    

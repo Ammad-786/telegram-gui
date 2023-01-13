@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css" >
+        <style>
+        /* Add some styling to the page */
+        .container {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            text-align: center;
+            align-items: center;
+            margin-top: 14px;
+            height: 100vh;
+        }
+        .message-box {
+        width: 400px;
+        height: 200px;
+        border: 1px solid gray;
+        margin: 0 auto;
+        padding: 10px;
+        }
+
+        .message-input {
+        width: 100%;
+        height: 150px;
+        border: none;
+        resize: none;
+        padding: 10px;
+        font-size: 18px;
+        }
+
+        #log-console {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #000;
+            color: #fff;
+            overflow: scroll;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="./To Set The Function.html">To Set The Function</a>
+            <a href="./Pull Function.html">Pull Function</a>
+            <a href="./Channel Function.html">Channel Function</a>
+            <a href="./Mass Distribution Function.html">Mass Distribution Function</a>
+            <a href="./Private Post Function.html">Private Post Function</a>
+            <a href="./Automatic Chat With Forwarding Function.html">Automatic Chat With Forwarding Function</a>
+            <a href="./Monitor Function.html">Moniter Function</a>
+            <a href="./Api Funtion.html">Account/API Function</a>
+        </div>
+            <div class="container  ">
+                <div style="display: flex; flex-direction: column; margin: auto;">
+                    <p>Listed Accounts</p>
+                    <div style="height: 200px; width: 300px; background-color: #fff; padding: 12px; border: 2px solid red; ">
+                        <table>
+                            <tr>
+                            <td><input type="checkbox" name="data1" value="data1"></td>
+                            <td>Data 1</td>
+                            </tr>
+                            <tr>
+                            <td><input type="checkbox" name="data2" value="data2"></td>
+                            <td>Data 2</td>
+                            </tr>
+                            <tr>
+                            <td><input type="checkbox" name="data3" value="data3"></td>
+                            <td>Data 3</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; margin: auto;">
+                    <p>Join Group Links</p>
+                    <div style="height: 200px; width: 300px; background-color: #fff; padding: 12px; border: 2px solid red;">                    
+                        <table>
+                            <tr>
+                            <td>1.</td>
+                            <td><a href="https://marketingteam.com">https://marketingteam.com</a></td>
+                            </tr>
+                            <tr>
+                            <td>2.</td>
+                            <td><a href="https://itsupport.com">https://itsupport.com</a></td>
+                            </tr>
+                            <tr>
+                            <td>3.</td>
+                            <td><a href="https://salesteam.com">https://salesteam.com</a></td>
+                            </tr>
+                        </table>                 
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; margin: auto;">
+                    <p>Keyword to listen to:</p>
+                    <div style="background-color: #fff; padding: 12px; border: 2px solid red;">
+                    <textarea class="message-input" placeholder="Type your keywords here"></textarea>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; margin: auto;">
+                    <p>Send DM Messages</p>
+                    <div style=" background-color: #fff; padding: 12px; border: 2px solid red;">
+                    <textarea class="message-input" placeholder="Type your message here"></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-success btn-lg" id="start">Start Listening</button>
+                    <button type="button" class="btn btn-danger btn-lg" id="stop">Stop Listening</button>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div>
+                        <label style="color: white;" for="keyword">Forward to the Designed Group:</label>
+                        <input type="text" id="keyword" name="keyword">
+                    </div>
+
+                    <div>
+                        <label style="color: white;" for="keyword">Forward to the Designed Person:</label>
+                        <input type="text" id="keyword" name="keyword">
+                    </div>
+                </div>
+
+            </div>
+            <div id="log-console">
+                <!-- messages will be output here -->
+            </div>
+            <script>
+                console.log('Initializing log console...');
+                // Output messages to the log console
+                function log(message) {
+                    var logConsole = document.getElementById('log-console');
+                    logConsole.innerHTML += '<br>' + message;
+                }
+        
+                log('Log console initialized.');
+            </script>
+    </body>
+</html>

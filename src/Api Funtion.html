@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css" >
+        <style>
+        /* Add some styling to the page */
+        .container {
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            text-align: center;
+            align-items: center;
+            margin-top: 14px;
+        }
+        /* first form */
+        .form1 {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            }
+
+            label {
+            font-weight: bold;
+            }
+
+            #verificationCodeBox {
+            width: 100%;
+            height: 50px;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            }
+
+            input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            }
+
+            #generateCode {
+            width: 100%;
+            background-color: #af864c;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            #submit {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+
+            /* form second */
+            .form2{
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+            }
+            label {
+            font-size: 16px;
+            margin-right: 10px;
+            }
+
+            input[type="checkbox"] {
+            margin-right: 10px;
+            }
+
+            #change-account-info {
+                width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            #start-change {
+                width: 100%;
+            background-color: #af4c4c;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            /* third form */
+            .form3 {
+            width: 400px;
+            margin: 10px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            }
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            label {
+                font-size: 18px;
+                font-weight: bold;
+                display: block;
+                margin-bottom: 10px;
+            }
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            .note {
+                font-size: 14px;
+                margin-top: 20px;
+            }
+
+            /* forth form */
+            .form4 {
+                width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            }
+
+            .label4 {
+            display: block;
+            margin-bottom: 5px;
+            }
+
+            .input4[type="text"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            }
+
+            button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            }
+
+            button:hover {
+            background-color: #45a049;
+            }
+
+            /* log console */
+        #log-console {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #000;
+            color: #fff;
+            overflow: scroll;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="./To Set The Function.html">To Set The Function</a>
+            <a href="./Pull Function.html">Pull Function</a>
+            <a href="./Channel Function.html">Channel Function</a>
+            <a href="./Mass Distribution Function.html">Mass Distribution Function</a>
+            <a href="./Private Post Function.html">Private Post Function</a>
+            <a href="./Automatic Chat With Forwarding Function.html">Automatic Chat With Forwarding Function</a>
+            <a href="./Monitor Function.html">Moniter Function</a>
+            <a href="./Api Funtion.html">Account/API Function</a>
+        </div>
+            <div class="container  ">
+
+                <div style="display: flex; flex-wrap: wrap;">
+                    <form class="form1">
+                        <label for="phoneNumber">Mobile Phone Number:</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="+1-555-555-5555">
+                        <br>
+                        <label for="verificationCode">Verification Code:</label>
+                        <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter code here">
+                        <br>
+                        <div id="verificationCodeBox"></div>
+                        <br>
+                        <button type="button" id="generateCode" name="generateCode" onclick="insertVerificationCode()">Generate Code</button>
+                        <br>
+                        <label for="password">Secondary Password:</label>
+                        <input type="password" id="password" name="password">
+                        <br>
+                        <button type="submit" id="submit" name="submit">Confirm Login</button>
+                      </form>
+                </div>
+                <div>
+                    <form class="form2">
+                        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 12px;">
+                            <label for="change-last-name">Change Last Name</label>
+                            <input type="checkbox" id="change-last-name" name="change-last-name" value="change-last-name">
+                            
+                            <label for="modify-name">Modify Name</label>
+                            <input type="checkbox" id="modify-name" name="modify-name" value="modify-name">
+                            
+                            <label for="modify-avatar">Modify Avatar</label>
+                            <input type="checkbox" id="modify-avatar" name="modify-avatar" value="modify-avatar">
+                            
+                            <label for="modify-username">Modify User Name</label>
+                            <input type="checkbox" id="modify-username" name="modify-username" value="modify-username">
+                            
+                            <label for="modify-introduction">Modify Introduction</label>
+                            <input type="checkbox" id="modify-introduction" name="modify-introduction" value="modify-introduction">
+                            
+                            <label for="change-second-password">Change Second Password</label>
+                            <input type="checkbox" id="change-second-password" name="change-second-password" value="change-second-password">
+                        </div>
+                        <div style="display: flex; flex-direction: row; justify-content: center; margin: auto; gap: 20px;">
+                            <button type="submit" id="change-account-info">Change Account Info</button>
+                            <button type="submit" id="start-change">Start Change</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div>
+                    <form class="form3">
+                        <p>Modify Developer Information: Change API</p>
+                        <label for="api_id">API ID:</label>
+                        <input type="text" id="api_id" name="api_id">
+                        <label for="api_hash">API HASH:</label>
+                        <input type="password" id="api_hash" name="api_hash">
+                        <input type="submit" value="Confirm Modification">
+                        <div class="note">Note: Register with your own TG number</div>
+                      </form>
+                </div>
+
+                <div>
+                    <form class="form4">
+                        <div style="display: flex; flex-direction: row; justify-content: center; margin: auto; padding: 8px;">
+                            <label class="lable4" for="leave-mute-group">Leave Mute Group</label>
+                            <input class="input4" type="checkbox" id="leave-mute-group" name="leave-mute-group">
+                        </div>
+                        <div>
+                            <label class="lable4" for="save-group-amount">Save Group Amount:</label>
+                            <input class="input4" type="text" id="save-group-amount" name="save-group-amount">
+                        </div>
+                        <div>
+                            <button type="button" id="one-click-return">One Click Return</button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+            <div id="log-console">
+                <!-- messages will be output here -->
+            </div>
+            <script>
+                // Function to generate a random verification code
+                function generateVerificationCode() {
+                let code = "";
+                const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                for (let i = 0; i < 6; i++) {
+                    code += possible.charAt(Math.floor(Math.random() * possible.length));
+                }
+
+                return code;
+                }
+
+                // Function to insert the code into the "verificationCodeBox" element
+                function insertVerificationCode() {
+                const phoneNumber = document.getElementById("phoneNumber").value;
+                if(!phoneNumber) {
+                    alert("Please enter your phone number first");
+                    return;
+                }
+                const verificationCodeBox = document.getElementById("verificationCodeBox");
+                const code = generateVerificationCode();
+                verificationCodeBox.innerHTML = code;
+                }
+
+
+
+                console.log('Initializing log console...');
+                // Output messages to the log console
+                function log(message) {
+                    var logConsole = document.getElementById('log-console');
+                    logConsole.innerHTML += '<br>' + message;
+                }
+        
+                log('Log console initialized.');
+            </script>
+    </body>
+</html>

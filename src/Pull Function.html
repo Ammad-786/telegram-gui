@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css" >
+    <style>
+        /* ...existing CSS styles... */
+    
+        /* Additional styles for the forms and their borders */
+        .form-container {
+          border-radius: 8px; /* Add rounded corners to the forms */
+          background-color: white;
+          justify-items: center;
+          margin: 20px;
+        }
+        .form-group1 {
+          background-color: #fff;
+          padding: 16px;/* Add padding to the form elements */
+          height: 300px;
+          justify-items: center;
+          align-items: center;
+          margin: 20px;
+          padding-bottom:8px ;
+          /* display: grid;
+          grid-template-columns: repeat(13,1fr); */
+          
+        }
+        .form-group2 {
+          background-color: #fff;
+          padding: 16px;/* Add padding to the form elements */
+          height: 600px;
+          justify-items: center;
+          align-items: center;
+          margin: 20px;
+          padding-bottom:8px ;
+          /* display: grid;
+          grid-template-columns: repeat(13,1fr); */
+          
+        }
+        /* Additional styles for the input fields */
+        input[type="text"] {
+          background-color: #ffffff; /* Add a light gray background color to the text fields */
+          border-radius: 2px;
+          border-color: black; /* Remove the border */
+          margin-bottom: 10px; /* Add padding */
+          border-radius: 4px; /* Add rounded corners */
+          font-size: 14px; /* Increase the font size */
+          height: 50px;
+          width: 200px;
+        }
+        /* Additional styles for the labels */
+        label {
+          font-weight: 600; /* Make the labels bold */
+          margin-bottom: 8px; /* Add a margin bottom to the labels */
+        }
+        /* Additional styles for the right side section */
+        .pull-status {
+           /* Add a light gray background color */
+          padding: 16px; /* Add padding */
+        }
+        /* Additional styles for the button */
+        .start-stop-btn {
+          background-color: #3498db; /* Change the background color to a blue */
+          color: #fff; /* Change the text color to white */
+          border: none; /* Remove the border */
+          border-radius: 4px; /* Add rounded corners */
+          font-weight: 600; /* Make the button text bold */
+          cursor: pointer; /* Change the cursor to a pointer */
+          margin: 20px; 
+          width: 100px;
+          height: 100px;
+          
+
+        }
+        /* Additional styles for the "Success" and "Failure" spans */
+        #success-count, #failure-count {
+          font-weight: 600; /* Make the text bold */
+        }
+        #log-console {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #000;
+            color: #fff;
+            overflow: scroll;
+        }
+      </style>
+</head>
+<body>
+  <div class="navbar">    
+    <a href="./To Set The Function.html">To Set The Function</a>
+    <a href="./Pull Function.html">Pull Function</a>
+    <a href="./Channel Function.html">Channel Function</a>
+    <a href="./Mass Distribution Function.html">Mass Distribution Function</a>
+    <a href="./Private Post Function.html">Private Post Function</a>
+    <a href="./Automatic Chat With Forwarding Function.html">Automatic Chat With Forwarding Function</a>
+    <a href="./Monitor Function.html">Moniter Function</a>
+    <a href="./Api Funtion.html">Account/API Function</a>
+  </div>
+
+        <div class="form-container  h-[200px] w-full p-8">
+            <form class="form-group1 flex flex-row ">
+            <label for="my-group-list">My Group List:</label>
+            <input class="form-control" type="text" id="member-id">
+            <label for="member-id">Member ID:</label>
+            <input class="form-control" type="text" id="member-id">
+            </form>
+        </div>
+        <div>
+            <form class="form-group2 pull-status">
+                <labe for="line-amounts">Line Amounts:</labe>
+                <input class="form-control" type="text" id="line-amounts">
+                <br>
+                <label for="add-time">Add Time:</label>
+                <input class="form-control" type="text" id="add-time">
+                <br>
+                <label  for="single-number-pull-people">Checkbox:</label>
+                <input type="checkbox" id="automatically add">
+                <br>
+                <label for="single-number-pull-people">Single Number Pull People:</label>
+                <input class="form-control" type="text" id="total-pulled" >
+                <br>
+                <label for="total-pulled">Total Number of People Pulled:</label>
+                <input class="form-control" type="text" id="total-pulled" >
+                <div>People Pulled Successfully: <span id="success-count">0</span></div>
+                <div>People Failed to Pull: <span id="failure-count">0</span></div>
+                <button class="btn btn-success btn-lg">Start</button>
+                <button class="btn btn-danger btn-lg">Stop</button>
+            </form>
+        </div>
+        <div id="log-console">
+          <!-- messages will be output here -->
+      </div>
+      <script>
+          console.log('Initializing log console...');
+          // Output messages to the log console
+          function log(message) {
+              var logConsole = document.getElementById('log-console');
+              logConsole.innerHTML += '<br>' + message;
+          }
+
+          log('Log console initialized.');
+      </script>
+</body>
+</html>

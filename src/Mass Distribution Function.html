@@ -1,0 +1,135 @@
+<!-- to-set-function.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css" >
+        <style>
+        /* Add some styling to the page */
+        .container {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            text-align: center;
+            align-items: center;
+            margin-top: 14px;
+            height: 100vh;
+        }
+        form {
+            margin-bottom: 8px;
+            background-color: #fff;
+        }
+        .checkbox1 {
+            display: grid;
+            margin: 10px;
+        }
+        .checkbox2 {
+            display: grid;
+            margin: 10px;
+        }
+        .typebox{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 10px;
+        }
+        .elements{
+            display: flex;
+            /* grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2px; */
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        button:hover{
+            background-color: black;
+            color:azure;
+        }
+        #log-console {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #000;
+            color: #fff;
+            overflow: scroll;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="./To Set The Function.html">To Set The Function</a>
+            <a href="./Pull Function.html">Pull Function</a>
+            <a href="./Channel Function.html">Channel Function</a>
+            <a href="./Mass Distribution Function.html">Mass Distribution Function</a>
+            <a href="./Private Post Function.html">Private Post Function</a>
+            <a href="./Automatic Chat With Forwarding Function.html">Automatic Chat With Forwarding Function</a>
+            <a href="./Monitor Function.html">Moniter Function</a>
+            <a href="./Api Funtion.html">Account/API Function</a>
+        </div>
+            <div class="container  ">
+                <form style="border: 2px solid red; padding: 10px;">
+                    <h3>Add Group</h3>
+                    <label for="group-name">Group Name:</label><br>
+                    <input type="text" id="group-name" name="group-name"><br>
+                    <label for="start-time">Start Time:</label><br>
+                    <input type="time" id="start-time" name="start-time"><br>
+                    <label for="end-time">End Time:</label><br>
+                    <input type="time" id="end-time" name="end-time"><br>
+                    <label for="interval-time">Interval Time:</label><br>
+                    <input type="time" id="interval-time" name="interval-time"><br>
+                    <label for="num-trips">Number of Trips:</label><br>
+                    <input type="number" id="num-trips" name="num-trips"><br>
+                    <label for="time-seconds">Time in Seconds:</label><br>
+                    <input type="number" id="time-seconds" name="time-seconds"><br>
+                    <label for="content">Pesudo-edited content:</label><br>
+                    <input type="text" id="content" name="content"><br>
+                    <label for="limit-count">Limit Count:</label><br>
+                    <input type="number" id="limit-count" name="limit-count"><br><br>
+                    <input type="checkbox" id="checkbox1" name="checkbox1">
+                    <label for="checkbox1">Multi-Line Mode</label><br>
+                    <input type="checkbox" id="checkbox2" name="checkbox2">
+                    <label for="checkbox2">Automatic Group Addition</label>
+                </form>
+
+                <div style="background-color: #fff; padding: 12px; border: 2px solid red; height: 400px; justify-content: center; margin: auto; display: flex; flex-direction: column;">
+                    <label for="send-message">Auto Send Message In group:</label><br>
+                    <input style="height: 150px; width: 200px;" type="text" id="send-message" name="send-message"><br>
+                    <label for="reply-message">Auto reply-message:</label><br>
+                    <input style="height: 150px; width: 200px;" type="text" id="reply-message" name="reply-message"><br>
+                </div>
+
+                <div style=" padding: 12px; background-color: #fff; border: 2px solid red; height: 500px; justify-content: center; margin: auto; display: flex; flex-direction: column;">
+                    <button style="height: 50px; width: 300px; margin: 4px;" class="btn btn-warning btn-lg">Save Setting</button>
+                    <button style="height: 50px; width: 300px; margin: 4px;" class="btn btn-success btn-lg">Start Mass Distribution</button>
+                    <button style="height: 50px; width: 300px; margin: 4px;" class="btn btn-danger btn-lg">Stop Mass Disribution</button>
+                </div>
+            </div>
+            <div style=" padding: 12px; background-color: #fff; border: 2px solid red;  justify-content: center; margin: auto; display: flex; flex-direction: row;">
+                <div style="display: flex; gap: 6px; align-items: center;">
+                    <label for="time-seconds">Time in Seconds:</label><br>
+                    <input type="number" id="time-seconds" name="time-seconds"><br>
+                </div>
+                <div>
+                    <button style="height: 50px; width: 300px; margin: 4px;" class="btn btn-success btn-lg">Start Adding Groups</button>
+                </div>
+            </div>
+            <div id="log-console">
+                <!-- messages will be output here -->
+            </div>
+            <script>
+                console.log('Initializing log console...');
+                // Output messages to the log console
+                function log(message) {
+                    var logConsole = document.getElementById('log-console');
+                    logConsole.innerHTML += '<br>' + message;
+                }
+        
+                log('Log console initialized.');
+            </script>
+    </body>
+</html>

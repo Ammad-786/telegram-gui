@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css" >
+        <style>
+            .container {
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            text-align: center;
+            align-items: center;
+            margin-top: 14px;
+            height: 100vh;
+        }
+        form {
+            margin-bottom: 8px;
+            background-color: #fff;
+        }
+        /* Create a custom checkbox */
+        .checkbox {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            position: relative;
+            margin-right: 10px;
+        }
+        #log-console {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #000;
+            color: #fff;
+            overflow: scroll;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="./To Set The Function.html">To Set The Function</a>
+            <a href="./Pull Function.html">Pull Function</a>
+            <a href="./Channel Function.html">Channel Function</a>
+            <a href="./Mass Distribution Function.html">Mass Distribution Function</a>
+            <a href="./Private Post Function.html">Private Post Function</a>
+            <a href="./Automatic Chat With Forwarding Function.html">Automatic Chat With Forwarding Function</a>
+            <a href="./Monitor Function.html">Moniter Function</a>
+            <a href="./Api Funtion.html">Account/API Function</a>
+        </div>
+            <div class="container  ">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); background-color: #fff; padding: 12px; border: 2px solid red; height: 600px;">
+                    <div>
+                        <p>Chat ID / Miaoqun ID</p>
+                        <table style="height: 300px; width: 300px; border: 2px solid black;">
+                            <tr>
+                            <td><input type="checkbox" name="option1" value="Option 1"></td>
+                            <td>Option 1</td>
+                            </tr>
+                            <tr>
+                            <td><input type="checkbox" name="option2" value="Option 2"></td>
+                            <td>Option 2</td>
+                            </tr>
+                            <tr>
+                            <td><input type="checkbox" name="option3" value="Option 3"></td>
+                            <td>Option 3</td>
+                            </tr>
+                        </table> 
+                    </div>
+                    <div>
+                        <p>Chat Link / Miaoqun Link / Group Link</p>
+                        <table style="height: 300px; width: 300px; border: 2px solid black;">
+                            <tr>
+                            <td><input type="checkbox" name="option1" value="Option 1"></td>
+                            <td>Option 1</td>
+                            </tr>
+                            <tr>
+                            <td><input type="checkbox" name="option2" value="Option 2"></td>
+                            <td>Option 2</td>
+                            </tr>
+                            <tr>
+                            <td><input type="checkbox" name="option3" value="Option 3"></td>
+                            <td>Option 3</td>
+                            </tr>
+                        </table> 
+                    </div>
+                    <div>
+                        <label  for="for-chat-id">Choose All:</label>
+                        <input type="checkbox" id="automatically add">
+                    </div>
+                    <div>
+                        <label  for="for-group link">Select All</label>
+                        <input type="checkbox" id="automatically add">
+                    </div>
+                    <div>
+                    <p style="color: red; display: flex;">Note: First copy the miaoqun account and link to the sodftware miaoqun.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <form style="height: 600px; border: 2px solid red; padding: 10px; display: grid; grid-template-columns: repeat(2, 1fr); gap:8px;">
+
+                        <label for="target-group-link">Target Group Link:</label>
+                        <input type="text" id="target-group-link" name="target-group-link">
+
+                        <label for="export-teaching-amount">Export Teaching (articles) Amount:</label>
+                        <input type="number" id="export-teaching-amount" name="export-teaching-amount">
+                        
+                        <label for="interval">Interval (seconds):</label>
+                        <input type="number" id="interval" name="interval" min="0" max="15">
+                        <p>~</p>
+                        <input type="number" id="interval" name="interval" min="0" max="15">
+                        
+                        <label for="repetitions">Number of Repetitions of Words:</label>
+                        <input type="number" id="repetitions" name="repetitions">
+                        
+                        <button type="submit" class="btn btn-success btn-lg">Start Chatting</button>
+                        <button type="submit" class="btn btn-danger btn-lg">Stop Chatting</button>
+                      
+                      </form>
+                </div>
+            </div>
+            <div id="log-console">
+                <!-- messages will be output here -->
+            </div>
+            <script>
+                console.log('Initializing log console...');
+                // Output messages to the log console
+                function log(message) {
+                    var logConsole = document.getElementById('log-console');
+                    logConsole.innerHTML += '<br>' + message;
+                }
+        
+                log('Log console initialized.');
+            </script>
+    </body>
+</html>
